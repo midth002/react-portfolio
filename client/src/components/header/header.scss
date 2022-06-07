@@ -1,0 +1,30 @@
+@import "../../global.scss";
+
+.jumbotron {
+    color: white;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    width: 50%;
+    margin-top: 5%;
+
+
+    .title {
+        p {
+            width: 100%;
+        }
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        h2 {
+            font-size: 60px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        #name {
+            color: $brightGreen;
+        }
+    }
+}
