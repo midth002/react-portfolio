@@ -1,12 +1,85 @@
+@import "../../global.scss";
 
 
-.underline {
-    display: inline;
-    position: relative;
-    overflow: hidden;
+.navbar {
+    padding: 15px 10px;
+    background-color: $navy;
+    padding-top: 5px;
+    display: flex; 
+    height: 10vh;
+    justify-content: center;
+    
+    
 
-    &:active {
-        
+    div {
+         display: flex;
+         width: 85%;
+         align-items: center;
+         .logos {
+            font-size: 2rem;
+            color: $brightGreen;
+            font-weight: bold;
+            text-decoration: none;
+         }
+        #navbarNav {
+
+            display: flex;
+            justify-content: end;
+
+            ul {
+                    padding-left: 0;
+
+                    li {
+                        display: inline-block;
+                        margin: 0px 10px;
+                     
+
+                        .underline {
+                            color: white;
+                            text-decoration: none;
+                            font-size: 20px;
+                            margin: 10px 10px 10px 0;
+                            display: inline;
+                            position: relative;
+                            overflow: hidden;
+
+                            &::after {
+                                content: '';
+                                height: 3px;
+                                width: 0;
+                                background: $brightGreen;
+                                position: absolute;
+                                left: 0;
+                                bottom: -15px;
+                                transition-property: width;
+                                transition-duration: 0.4s;
+                                transition-timing-function: ease-out;
+                                z-index: 3;
+                            }
+
+                          
+                        }
+
+                        .resume {
+                            background-color: $navy;
+                            border-color: $brightGreen;
+                            color: white;
+
+                            
+
+                            &:hover {
+                                background-color: $lightestNavy;
+                            }
+
+
+                        }
+                    }
+                }
+            }
+
+
+                      
+        }
+
     }
-}
 
