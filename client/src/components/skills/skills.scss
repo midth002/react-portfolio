@@ -1,0 +1,31 @@
+@import '../../global.scss';
+
+.skills {
+    background-color: $darkGreen;
+    
+    text-align: center;
+    height: 70vh;
+    width: 100%;
+    
+    .container {
+        color: $lightestSlate;
+        flex-wrap: wrap;
+        
+
+        .row {
+
+            .burger {
+                float: left;
+            }
+
+            .skills-list {
+                float: right;
+            }
+
+            h4 {
+                width: 100%;
+            }
+        }
+    }
+}
+
