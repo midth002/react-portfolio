@@ -1,5 +1,14 @@
 @import '../../global.scss';
 
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
 .skills {
     background-color: $lightestNavy;
     position: relative;
@@ -55,18 +64,77 @@
          
             width: 70%;
 
-               .icon {
-                   position: absolute;
-                   top: 50%;
-                   left: 50%;
-                   width: 2em;
-                   height: 4em;
-                   margin: -2em;
-               }
-           
+                .skills-btn {
+                    position: absolute;
+                    top: -15%;
+                    left: -5%;
+                    padding: 10px;
+                    background-color: $brightGreen;
+                    border: 2px solid $brightGreen;
+                    border-radius: 5px;
+                    box-shadow: 7px 11px 29px -5px rgba(0,0,0,0.56);
+                    color: white;
+                    font-weight: bold; 
+
+                    &:hover {
+                        background-color: $lightestNavy;
+                        transition: 0.7s;
+                    }
+                }
+                
+                .icon-div {
+                    display: flex;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                  
+                 
+                   
+     
+                    .caption {
+                
+                     display: none;
+        
+                    }
+
+                    .icon {
+                      
+                        width: 2em;
+                        height: 4em;
+                        margin: -2em;
+                        &:hover {
+                            color: $brightGreen;
+                            width: 2.5em;
+                            transition: 0.5s;
+                         
+                        }
+                    }
+
+                    &:hover {
+
+                           
+                        .caption {
+                            display: block;
+                            -webkit-animation: fadeIn 1s;
+                            animation: fadeIn 1s;
+                            position: absolute;
+                            left: 115px;
+                            top: 20px;
+                        }
+                    }
+                   
+                
+                }
+
+            
                     
                     img {
                         width: 175px;
+                        border-radius: 50px;
+                    }
+
+                    .backend-pic {
+                        width: 120px;
                     }
 
                 

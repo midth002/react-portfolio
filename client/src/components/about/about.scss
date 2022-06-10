@@ -30,12 +30,31 @@
     .image-col {
         float: right;
 
+        &::after {
+            content: '';
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 95%;
+            border-radius: 10px;
+            border: 2px solid $brightGreen;
+            top: -90%;
+            left: 15px;
+            z-index: -1;
+            
+        }
+
+        
+
         img {
             width: 300px;
-            border-radius: 25px;
+            border-radius: 10px;
+            background-color: $brightGreen;
+            
         }
 
         }
+   
     }
 
     }

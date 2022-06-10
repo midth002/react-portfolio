@@ -19,7 +19,10 @@ const About = () => {
         </div>
           <div className="col image-col">
             <img  src={me} alt="coder icon" id="coder" />
+            {/* <div className="square-outline">
+            </div>  */}
           </div>
+         
         </div>
       </div>
     </div>
