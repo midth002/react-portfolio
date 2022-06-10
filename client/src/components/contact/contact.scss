@@ -1,0 +1,36 @@
+@import "../../global.scss";
+
+.contact {
+
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+    
+    .contact-title {
+        width: 100%;
+    }
+
+    .mailTo {
+         width: 100%;
+        a {
+            
+                color: $brightGreen;
+                text-decoration: none;
+                padding: 10px;
+                background-color: $navy;
+                border: 2px solid $darkGreen;
+                border-radius: 5px;
+                align-items: center;
+
+                &:hover {
+                    background-color: $darkGreen;
+                    color: white;
+                    transition: 1s;
+                }
+            }
+        }
+    }
+

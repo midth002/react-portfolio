@@ -1,31 +1,87 @@
 @import '../../global.scss';
 
 .skills {
-    background-color: $darkGreen;
+    background-color: $lightestNavy;
+    position: relative;
+    overflow: visible;
+    
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        bottom: 0;
+        transform-origin: left bottom;
+        left: 0;
+        transform: skewY(3deg);
+    }
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        transform-origin: right top;
+        
+        transform: skewY(3deg);
+    }
     
     text-align: center;
-    height: 70vh;
+    height: 75vh;
     width: 100%;
     
     .container {
         color: $lightestSlate;
         flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+
+        .skills-title {
+            text-align: center;
+            width: 100%;
+        }
         
+        .skills-circle {
+            
+            position: relative;
+            margin: 5%;
+         
+            width: 70%;
 
-        .row {
+               .icon {
+                   position: absolute;
+                   top: 50%;
+                   left: 50%;
+                   width: 2em;
+                   height: 4em;
+                   margin: -2em;
+               }
+           
+                    
+                    img {
+                        width: 175px;
+                    }
 
-            .burger {
-                float: left;
+                
+                
+                    .deg0 { transform: translate(10em); }
+                    .deg45 { transform: rotate(45deg) translate(12em) rotate(-45deg); }
+                    .deg135 { transform: rotate(135deg) translate(12em) rotate(-135deg); }
+                    .deg180 { transform: translate(-9em); }
+                    .deg225 { transform: rotate(225deg) translate(10em) rotate(-225deg); }
+                    .deg315 { transform: rotate(315deg) translate(10em) rotate(-315deg); }
+
             }
 
-            .skills-list {
-                float: right;
-            }
-
-            h4 {
-                width: 100%;
-            }
+        
         }
     }
-}
+
 
