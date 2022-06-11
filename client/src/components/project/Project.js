@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectList from './ProjectList';
+import './project.scss';
 import { projectList } from '../../utils/data';
 
 
@@ -7,7 +8,8 @@ const Project = () => {
 
   return (
     <div className='projects' id='projects'>
-        <h1>Projects</h1>
+      <div><h1>Projects</h1></div>
+        
         <div className="container">
             <ProjectList projects={projectList}/>
         </div>

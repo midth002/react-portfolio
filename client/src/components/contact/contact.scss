@@ -7,8 +7,9 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 600px;
-    
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
     .contact-title {
         width: 100%;
     }
@@ -31,6 +32,33 @@
                     transition: 1s;
                 }
             }
+        }
+    
+        .contact-description {
+            width: 50%;
+            padding: 20px;
+            p {
+                color: $lightSlate;
+            }
+        }
+
+        .copyright {
+            padding-top: 100px;
+            width: 100%;
+            p{
+
+    
+            a {
+                text-decoration: none;
+                color: $lightSlate;
+                font-family: $font-mono;
+
+                &:hover {
+                    color: $brightGreen;
+                }
+            }
+
+        }
         }
     }
 

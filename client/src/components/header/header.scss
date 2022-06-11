@@ -8,11 +8,13 @@
     width: 50%;
     margin-top: 5%;
     margin-bottom: 15%;
-
+    height: 70vh;
+    align-items: center;
 
     .title {
         p {
             width: 100%;
+            
         }
         text-align: left;
         display: flex;
@@ -20,7 +22,7 @@
         flex-wrap: wrap;
         h2 {
             font-size: 60px;
-            margin: 0 auto;
+            margin: 0;
             width: 100%;
         }
 

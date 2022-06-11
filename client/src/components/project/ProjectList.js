@@ -13,8 +13,9 @@ const ProjectList = ({projects}) => {
             
             <div className="row">
             
-                    <div className="col-md-5 description">
-                    <h3>{project.title}</h3>
+                    <div className="col description">
+                    <div><h3>{project.title}</h3></div>
+                    
                         <p class="summary">{project.description}</p>
                         <div>
                         <ul>
