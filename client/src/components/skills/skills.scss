@@ -21,7 +21,7 @@
         height: 100%;
         position: absolute;
         background: inherit;
-        z-index: -1;
+        z-index: -2;
         bottom: 0;
         transform-origin: left bottom;
         left: 0;
@@ -34,7 +34,7 @@
         height: 100%;
         position: absolute;
         background: inherit;
-        z-index: -1;
+        z-index: -2;
         bottom: 0;
         left: 0;
         transform-origin: right top;
@@ -55,19 +55,32 @@
         .skills-title {
             text-align: center;
             width: 100%;
+            margin-bottom: 5px;
+            height: 25px;
         }
         
         .skills-circle {
             
-            position: relative;
+          
+          
             margin: 5%;
-         
+            text-align: left;
             width: 70%;
 
+            div {
+                h6 {
+                    margin-top: 0;
+                    font-style: italic;
+
+                    span {
+                        color: $brightGreen;
+                    }
+                }
+            }
+            
+
                 .skills-btn {
-                    position: absolute;
-                    top: -15%;
-                    left: -5%;
+                    
                     padding: 10px;
                     background-color: $brightGreen;
                     border: 2px solid $brightGreen;
@@ -81,45 +94,100 @@
                         transition: 0.7s;
                     }
                 }
+
                 
+
+                .row {
+                    display: flex; 
+
+                    .iconPic {
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+
+                        img {
+                            width: 250px;
+                            border-radius: 25px;
+                            margin-right: 25px;
+                        }
+                    }
+                    
+                    
+
+                .backend-pic {
+                    width: 30%;
+                    position: relative;
+                    border: 2px solid $brightGreen;
+                    height: 250px;
+                    background-color: $darkGreen;
+            
+                    z-index: 2;
+                    
+                    &:hover {
+                        top: -25px;
+                        transition: 0.5s ease-in-out;
+                    }
+
+            }
+
+            .frontend-pic {
+                width: 30%;
+                position: relative;
+                left: -20%;
+                top: 25px;
+                border: 2px solid $lightestSlate;
+                height: 250px;
+                background-color: $lightestNavy;
+                opacity: 0.9;
+                z-index: 1;
+                &:hover {
+                    top: 15px;
+                }
+               
+            }
+
+                .skills-section {
+                    margin-left: 10%;
+               
                 .icon-div {
-                    display: flex;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                  
-                 
-                   
+                    display: inline-block;
+                    justify-content: space-between;
+                    margin: 0 20px;
+                    height: 100px;
+                    width: 50px;
      
                     .caption {
                 
-                     display: none;
+                     color: $lightestNavy;
         
                     }
 
                     .icon {
                       
-                        width: 2em;
+                        width: 2.2em;
                         height: 4em;
-                        margin: -2em;
+                   
                         &:hover {
                             color: $brightGreen;
-                            width: 2.5em;
+                            width: 2.7em;
                             transition: 0.5s;
                          
                         }
                     }
 
+                  
+
                     &:hover {
 
                            
                         .caption {
+                            color: $lightestSlate;
                             display: block;
                             -webkit-animation: fadeIn 1s;
                             animation: fadeIn 1s;
-                            position: absolute;
-                            left: 115px;
-                            top: 20px;
+                           
+                         
                         }
                     }
                    
@@ -133,18 +201,11 @@
                         border-radius: 50px;
                     }
 
-                    .backend-pic {
-                        width: 120px;
-                    }
+                }
 
                 
                 
-                    .deg0 { transform: translate(10em); }
-                    .deg45 { transform: rotate(45deg) translate(12em) rotate(-45deg); }
-                    .deg135 { transform: rotate(135deg) translate(12em) rotate(-135deg); }
-                    .deg180 { transform: translate(-9em); }
-                    .deg225 { transform: rotate(225deg) translate(10em) rotate(-225deg); }
-                    .deg315 { transform: rotate(315deg) translate(10em) rotate(-315deg); }
+            }
 
             }
 
