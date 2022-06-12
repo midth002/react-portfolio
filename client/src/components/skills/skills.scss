@@ -9,6 +9,15 @@
       to { opacity: 1; }
 }
 
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .skills {
     background-color: $lightestNavy;
     position: relative;
@@ -150,6 +159,7 @@
 
                 .skills-section {
                     margin-left: 10%;
+                    
                
                 .icon-div {
                     display: inline-block;
@@ -157,6 +167,7 @@
                     margin: 0 20px;
                     height: 100px;
                     width: 50px;
+                   
      
                     .caption {
                 
@@ -165,7 +176,7 @@
                     }
 
                     .icon {
-                      
+                        animation: 2s ease-out 0s 1 slideInFromRight;
                         width: 2.2em;
                         height: 4em;
                    
