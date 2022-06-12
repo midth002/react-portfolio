@@ -97,3 +97,33 @@
 
     }
 }
+
+@media screen and (max-width: 995px) {
+    .aboutMe {
+        height: 60vh;
+        &::before {
+            transform: none;
+            }
+    
+            &::after {
+                transform: none;
+            }
+
+            .container {
+                .row {
+                    .about-content {
+                        p {
+                            font-size: 25px;
+                        }
+                    }
+
+                    .image-col {
+                        img {
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+    }
+   
+}
