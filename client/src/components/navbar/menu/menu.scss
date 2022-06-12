@@ -37,12 +37,14 @@
                 font-weight: 300;
                 width: 100%;
                 display: block;
+                font-family: $font-mono;
         
                 li {
         
                     margin-bottom: 30px;
                     &:hover {
                         color: $brightGreen;
+                        font-size: 32px;
                     }
         
                     a {
