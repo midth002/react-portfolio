@@ -78,6 +78,7 @@
                             padding: 0.375rem 0.75rem;
                             border-radius: 0.25rem;
                             border: 2px solid $brightGreen;
+                            text-decoration: none;
 
                             &:hover {
                                 background-color: $lightestNavy;
@@ -96,3 +97,11 @@
 
     }
 
+    @media screen and (max-width: 995px){
+        #navbarNav {
+            ul {
+                display: none;
+            }
+            
+        }
+    }

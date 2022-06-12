@@ -1,0 +1,16 @@
+@import '../../global.scss';
+
+.right-sidebar {
+    z-index: 3;
+    position: fixed;
+    height: 100vh;
+    .vertical-lin-right {
+        border-left: 3px solid $lightSlate;
+        height: 100%;
+        position: relative;
+        
+        top: 25px;
+        left: 25px;
+        margin-left: -3px;
+    }
+}
