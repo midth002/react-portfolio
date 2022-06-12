@@ -108,3 +108,26 @@ div {
     }
 
 }
+
+@media screen and (max-width: 995px) {
+    div {
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+           
+            .description {
+                width: 90%;
+                position: static;
+
+                .btn-link-div {
+                    justify-content: space-around;
+                }
+                
+            }
+            .image {
+                width: 90%;
+            }
+        }
+    }
+}

@@ -13,6 +13,7 @@
     background-color: $lightestNavy;
     position: relative;
     overflow: visible;
+    transition: all 2s ease;
     
 
     &::before {
@@ -212,5 +213,39 @@
         
         }
     }
+
+    @media screen and (max-width: 995px) {
+        .skills {
+                    
+                    &::before {
+                    transform: none;
+                    }
+    
+                    &::after {
+                        transform: none;
+                    }
+    
+                    .container {
+                       .skills-circle {
+                           width: 95%;
+
+                           .message {
+                               width: 100%;
+                           }
+                           .row {
+
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                               .skills-section {
+                                   width: 500px;
+                               }
+
+                           
+                           }
+                       }
+                    }
+                }
+            }
 
 

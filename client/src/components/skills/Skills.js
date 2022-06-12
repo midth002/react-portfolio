@@ -31,17 +31,19 @@ import  { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
     <div className='skills-title'>
       <h2>SKILLS</h2>
     </div>
-    <div className="row skills-circle">
 
     {!changeList ? 
-      <div>
+      <div className="message">
       <h6>Click the picture to change to <span>backend</span> skills.</h6>
       </div>
       :
-      <div>
+      <div className='message'>
       <h6>Click the picture to change to <span>frontend</span> skills.</h6>
       </div>
     }
+    <div className="row skills-circle">
+
+  
     
     <div className="row">
 
