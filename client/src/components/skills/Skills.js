@@ -31,7 +31,7 @@ import  { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
     <div className='skills-title'>
       <h2>SKILLS</h2>
     </div>
-
+{/* 
     {!changeList ? 
       <div className="message">
       <h6>Click the picture to change to <span>backend</span> skills.</h6>
@@ -40,7 +40,7 @@ import  { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
       <div className='message'>
       <h6>Click the picture to change to <span>frontend</span> skills.</h6>
       </div>
-    }
+    } */}
     <div className="row skills-circle">
 
   
@@ -53,9 +53,9 @@ import  { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
       
       <>
      
-      <div className="iconPic" onClick={handleClick}>
+      {/* <div className="iconPic" onClick={handleClick}>
           <img src={frontEnd} />
-        </div>
+        </div> */}
         <div className="skills-section col"> 
         <div className="icon-div deg0 ">
         <FontAwesomeIcon className="icon" icon={faJs} />
@@ -80,6 +80,14 @@ import  { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
         <div className="icon-div deg315">
         <FontAwesomeIcon className="icon" icon={faAngular} />
         <span className="caption row">Angular</span>
+        </div>
+        <div className="icon-div deg45">
+        <FontAwesomeIcon className="icon" icon={faJava} />
+        <span className="caption">Java</span>
+        </div>
+        <div className="icon-div deg135">
+        <FontAwesomeIcon className="icon" icon={faNodeJs} />
+        <span className="caption row">NodeJs</span>
         </div>
         </div>
         
