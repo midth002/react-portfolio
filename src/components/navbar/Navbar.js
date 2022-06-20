@@ -23,7 +23,6 @@ const Navbar = () => {
         <li><a href={resume} className="btn resume btn-danger text-white" target="_blank">Resume</a></li>
       </ul>
     </div>
-   
   </div>
   </div>
   <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
