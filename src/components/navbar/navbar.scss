@@ -23,6 +23,11 @@
             color: $brightGreen;
             font-weight: bold;
             text-decoration: none;
+
+            &:hover {
+                transition: all 1s ease-in-out;
+                font-size: 1.7rem;
+            }
          }
         #navbarNav {
 

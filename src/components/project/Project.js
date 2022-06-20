@@ -6,6 +6,8 @@ import { projectList } from '../../utils/data';
 
 const Project = () => {
 
+  console.log(projectList)
+
   return (
     <div className='projects' id='projects'>
       <div><h1>Projects</h1></div>

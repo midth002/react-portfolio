@@ -17,7 +17,7 @@ const ProjectList = ({projects}) => {
                     <div><h3>{project.title}</h3></div>
                     
                         <p class="summary">{project.description}</p>
-                        <div>
+                        <div className="tools">
                         <ul>
                         {project.tools.map((p) => 
                             <li>{p}</li>

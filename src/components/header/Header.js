@@ -3,7 +3,7 @@ import "./header.scss"
 
  const Header = () => {
   return (
-    <div class="jumbotron d-flex mx-auto pt-50 w-50">
+    <div class="jumbotron d-flex mx-auto pt-50 w-50" id="header">
               <div class="title">
                 <p>Hello, my name is</p>
                 <h2 id="name">Andrew Midthun.</h2>

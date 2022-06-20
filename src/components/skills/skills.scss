@@ -109,6 +109,7 @@
 
                 .row {
                     display: flex; 
+                    justify-content: center;
 
                     .iconPic {
 
@@ -158,15 +159,18 @@
             }
 
                 .skills-section {
-                    margin-left: 10%;
-                    
+                   
+                    width: 70%;
+                    display: flex; 
+                    justify-content: center;
+                    flex-wrap: wrap;
                
                 .icon-div {
                     display: inline-block;
                     justify-content: space-between;
-                    margin: 0 20px;
+                    margin: 0 40px;
                     height: 100px;
-                    width: 50px;
+                    width: 75px;
                    
      
                     .caption {
@@ -177,12 +181,12 @@
 
                     .icon {
                         animation: 2s ease-out 0s 1 slideInFromRight;
-                        width: 2.2em;
+                        width: 2.5em;
                         height: 4em;
                    
                         &:hover {
                             color: $brightGreen;
-                            width: 2.7em;
+                            width: 3em;
                             transition: 0.5s;
                          
                         }
@@ -227,7 +231,7 @@
 
     @media screen and (max-width: 995px) {
         .skills {
-                    height: 50vh;
+                    height: 90vh;
                     &::before {
                     transform: none;
                     }
@@ -249,7 +253,7 @@
                             flex-wrap: wrap;
                             align-items: center;
                                .skills-section {
-                                   width: 500px;
+                                   width: 90%;
                                }
 
                            
