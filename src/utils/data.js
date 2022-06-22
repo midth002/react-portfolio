@@ -16,13 +16,13 @@ export const projectList = [
             tools: [ 'HTML', 'Bulma', 'Javascript', 'JQuery', 'Third Party APIs']
         }, 
         {
-            title: 'Brewery Finder API',
+            title: 'React FindMeABrew API',
             description: `The current weather conditions will also be displayed for the search 
             location to help guide users if the weather conditions are favorable to go sit at a patio for a pint, 
             or if they feel like checking out a micro brewery instead`,
-            image: './images/breweryFinder.png',
-            url: "https://midth002.github.io/project1/",
-            github: "https://github.com/midth002/project1",
+            image: './images/locationpage1.png',
+            url: "https://findmeabrewapi.netlify.app/",
+            github: "https://github.com/midth002/react-brewery-api",
             tools: ['Handlebars', 'Bootstrap', 'Node JS', 'JQuery', 'MySQL']
         }
 ]
