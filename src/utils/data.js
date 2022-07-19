@@ -41,7 +41,7 @@ export const projectList = [
             Also, developers can comment on other posts on the web page. 
             This app follows the MVC (model-view-controller) that uses technologies 
             like handlebars, node js, mysql, sequelize and other npm packages.`,
-            image: './images/blogHompage.png',
+            image: './images/blogHomepage.png',
             url: "https://mvc-avm-tech-blog-post.herokuapp.com/",
             github: "https://github.com/midth002/14-tech-blog",
             tools: ['Handlebars', 'Bootstrap', 'Node JS', 'JQuery', 'MySQL']
