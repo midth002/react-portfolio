@@ -1,8 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import "./skills.scss"; 
-import sandwich from '../../assets/images/sandwich.png'
-import frontEnd from '../../assets/images/front-end-monitor.jpg';
+
 import backEnd from '../../assets/images/backend-icon.png';
 import { frontEndArray, tools, backend } from "../../utils/tools.js";
 import { faBluetooth } from '@fortawesome/free-solid-svg-icons';
