@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'; 
 import './navbar.scss';
-import resume from '../../assets/resume/resume-6-7-22.pdf';
+import resume from '../../assets/resume/resume.pdf';
 import Hamburger from './hamburger/Hamburger';
 import Menu from './menu/Menu.js';
 
