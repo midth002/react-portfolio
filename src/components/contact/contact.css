@@ -10,7 +10,7 @@
 
 .project-paper::before {
     content: "";
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    background: linear-gradient(90.21deg,  #233554 -5.91%,#249c80 111.58%);
     opacity: 0.85;
     position: absolute;
     width: 100%;
@@ -42,7 +42,7 @@
 .project-paper-links {
     position: absolute;
     text-align: center;
-    top: 75%;
+    top: 90%;
     left: 75%;
     transform: translate(-50%, -50%);
     transition: 1s ease-in-out;
@@ -51,7 +51,7 @@
 }
 
 .project-paper:hover .project-paper-links {
-    top: 60%;
+    top: 70%;
     opacity: 1;
 }
 
