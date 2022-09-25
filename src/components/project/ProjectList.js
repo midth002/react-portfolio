@@ -14,7 +14,7 @@ import {
   Box,
   IconButton,
   Tooltip,
-  Zoom,
+  Paper
 } from "@mui/material";
 
 const ProjectList = ({ projects }) => {
@@ -38,36 +38,31 @@ const ProjectList = ({ projects }) => {
       sx={{ justifyContent: "center", p: 5 }}
     >
       {projects.map((project) => (
-        <Zoom
-          in={inView}
-          timeout={1500}
-          style={{ transitionDelay: inView ? "250ms" : "0ms" }}
-        >
-          <Grid item xs={10}  md={4} sx={{ justifyContent: "center" }}>
-            <Card
-              onMouseOver={handleMouseOver}
-              onMouseOut={handleMouseOut}
-              sx={{
-                width: "100%",
-                justifyContent: "center",
-                transition: "0.2s",
-                "&:hover": {
-                  transform: "scale(1.1)",
-                  boxShadow: `0 6px 12px 0 #233554`,
-                },
-              }}
-            >
-              <CardMedia
-                component="img"
-                image={project.image}
-                height="250"
-                sx={{ opacity: 0.7 }}
-              />
+        
+          <Grid item xs={10}  md={6} sx={{ justifyContent: "center" }}>
 
-              <CardContent
+
+          <Paper 
+          ref={ref}
+        className="project-paper"
+        style={{ 
+          backgroundImage: `url(${project.image})`, 
+          height: '350px',
+          boxShadow: `0 6px 12px 0 #233554`, 
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          
+          }}>
+
+             
+
+              <Box
                 sx={{
                   backgroundImage: `linear-gradient(to right bottom, #112240, #004a6e, #007695, #00a4b0, #3bd3bd);`,
                   color: "white",
+                  position: 'relative',
+                  top: '85%', 
+                  textAlign: 'center'
                 }}
               >
                 <Typography
@@ -76,9 +71,7 @@ const ProjectList = ({ projects }) => {
                 >
                   {project.title}
                 </Typography>
-                <Typography variant="body1" sx={{ fontSize: 12 }}>
-                  {project.description}
-                </Typography>
+              
                 <List component={Stack} direction="row" sx={{ px: 2, pb: 0 }}>
                   {project.tools.map((p) => (
                     <ListItem
@@ -89,7 +82,6 @@ const ProjectList = ({ projects }) => {
                         justifyContent: "center",
                         color: "grey",
                         borderRadius: 2,
-                        // border: '2px solid white',
                         textAlign: "center",
                         padding: 0.5,
                       }}
@@ -108,23 +100,10 @@ const ProjectList = ({ projects }) => {
                   ))}
                 </List>
 
-                <Box>
-                  <Tooltip title="Github Repo">
-                    <IconButton aria-label="Github Repo">
-                      <GitHub />
-                    </IconButton>
-                  </Tooltip>
-
-                  <Tooltip title="Live Link">
-                    <IconButton aria-label="Github Repo">
-                      <OpenInBrowser />
-                    </IconButton>
-                  </Tooltip>
                 </Box>
-              </CardContent>
-            </Card>
+            </Paper>
           </Grid>
-        </Zoom>
+       
       ))}
     </Grid>
   );

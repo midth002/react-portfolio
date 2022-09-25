@@ -1,10 +1,26 @@
-import React from "react";
-import "./contact.scss";
-import { Box, Button, Stack, Typography, Link, Tooltip, IconButton } from "@mui/material";
+import { useState } from "react";
+import "./contact.css";
+import { Box, Button, Stack, Typography, Link, Tooltip, IconButton, Paper } from "@mui/material";
+import { GitHub, OpenInBrowser } from "@mui/icons-material";
 import { ArrowCircleUp } from "@mui/icons-material";
+import mountain from '../../assets/images/mountain-background.jpeg';
+
+
+const backgroundHead = {
+  backgroundImage: 'url('+ mountain+')'
+  }
+
+
+
 
 
 const Contact = () => {
+
+  const [ hover, setHover ] = useState(false); 
+
+
+
+
   return (
     <Box
       sx={{ display: "flex", justifyContent: "center", my: 3 }}
@@ -61,7 +77,57 @@ const Contact = () => {
 
         </Box>
         
+        <Paper 
+        className="project-paper"
+        style={{ backgroundImage: `url(${mountain})`, height: '500px' }}>
+            
        
+        <Typography color="white" variant="p" className="project-paper-content">This section will include short description for each project</Typography>
+
+        <Stack spacing={1} direction="row" sx={{ display: 'flex', jusitfyContent: 'center'}} className="project-paper-links">
+          <Button
+            variant="contained"  
+            endIcon={<GitHub />} 
+          >
+          Github
+          </Button>
+          <Button
+             variant="contained"  
+              endIcon={<OpenInBrowser />} 
+          >Link</Button>
+        </Stack>
+       
+
+        </Paper>
+
+
+        <Paper 
+      
+      className="project-paper"
+      style={{ backgroundImage: `url(${mountain})`, height: '500px' }}>
+          
+     
+      <Typography color="white" variant="p" className="project-paper-content">This section will include short description for each project</Typography>
+
+      <Stack spacing={1} direction="row" sx={{ display: 'flex', jusitfyContent: 'center'}} className="project-paper-links">
+        <Button
+          variant="contained"  
+          endIcon={<GitHub />} 
+        >
+        Github
+        </Button>
+        <Button
+           variant="contained"  
+            endIcon={<OpenInBrowser />} 
+        >Link</Button>
+      </Stack>
+     
+
+      </Paper>
+
+
+        
+
         
       </Stack>
     </Box>

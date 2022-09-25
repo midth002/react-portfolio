@@ -31,10 +31,10 @@
 
             img {
                 padding-top: 1%;
-                width: 130px;
+                width: 150px;
                 transition: all 500ms ease-in-out;
                 &:hover {
-                    transform: scale(1.1) rotate(-45deg);
+                    transform:  rotate(-45deg);
                 }
             }
 
