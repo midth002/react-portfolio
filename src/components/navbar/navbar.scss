@@ -3,7 +3,6 @@
 
 .navbar {
     padding: 15px 10px;
-    background-color: $navy;
     padding-top: 5px;
     display: flex; 
     height: 10vh;
@@ -12,17 +11,32 @@
     z-index: 3;
     top: 0; 
     width: 100%;
-    
+    transition: all 1s ease-in-out; 
+   
 
-    div {
+    .container-fluid {
          display: flex;
-         width: 95%;
+         width: 90%;
          align-items: center;
+
+    
          .logos {
             font-size: 1.5rem;
             color: $brightGreen;
             font-weight: bold;
             text-decoration: none;
+            cursor: pointer;
+            background: none;
+           
+
+            img {
+                padding-top: 1%;
+                width: 130px;
+                transition: all 500ms ease-in-out;
+                &:hover {
+                    transform: scale(1.1) rotate(-45deg);
+                }
+            }
 
             &:hover {
                 transition: all 1s ease-in-out;
@@ -31,16 +45,20 @@
          }
         #navbarNav {
 
+            width: 100%;
             display: flex;
+            flex-wrap: nowrap;
+           
             justify-content: end;
 
             ul {
                     padding-left: 0;
+                   
 
                     li {
                         display: inline-block;
-                        margin: 0px 10px;
-                     
+                        margin: 0px 15px;
+                        cursor: pointer;
 
                         .underline {
                             color: white;
@@ -102,11 +120,43 @@
 
     }
 
-    @media screen and (max-width: 995px){
-        #navbarNav {
-            ul {
-                display: none;
-            }
+    .active {
+        background: $navy;
+        transition: all 1s ease-in-out;
+    }
+
+    @media screen and (max-width: 900px){
+
+        .navbar {
+
+            .container-fluid {
             
+
+                #navbarNav {
+                    ul {
+                        display: none;
+                    }
+                    
+                }
+            }
+
+           
+        }
+
+      
+    }
+
+
+    @media screen and (max-width: 970px) {
+
+        .navbar {
+            #navbarNav {
+                ul {
+                    li {
+                        margin: 0px 5px;
+                    }
+                }
+                
+            }
         }
     }

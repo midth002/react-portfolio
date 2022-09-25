@@ -10,18 +10,31 @@
 }
 
 .jumbotron {
-    color: white;
+   
     display: flex;
     margin: 0 auto;
     justify-content: center;
-    width: 50%;
-    margin-top: 5%;
-    margin-bottom: 15%;
-    height: 70vh;
+    width: 100%;
+    // margin-top: 5%;
+    // margin-bottom: 15%;
+    height: 100vh;
     align-items: center;
     animation: 2s ease-out 0s 1 slideInFromBottom;
+    background: url('../../assets/images/mountain-background.jpeg') no-repeat center center fixed rgba(0, 151, 19, 0.6);
+    z-index: -1;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+
+
+    
 
     .title {
+        z-index: 3;
+        width: 75%;
         p {
             width: 100%;
             
@@ -34,6 +47,10 @@
             font-size: 60px;
             margin: 0;
             width: 100%;
+        }
+
+        .details-me {
+            color: $lightestSlate;
         }
 
         #name {

@@ -1,123 +1,233 @@
-import React from 'react';
-import { useState } from 'react';
-import "./skills.scss"; 
+import React from "react";
+import "./skills.scss";
+import aws from "../../assets/icons/aws-logo.png";
+import bootstrap from "../../assets/icons/bootstrap-logo.png";
+import css from "../../assets/icons/css-logo.png";
+import html from "../../assets/icons/HTML5-logo.png";
+import javascript from "../../assets/icons/JavaScript-logo.png";
+import materialUI from "../../assets/icons/material-ui.png";
+import mongoDB from "../../assets/icons/mongoDB-logo.jpg";
+import mySQL from "../../assets/icons/mySQL-logo.png";
+import nextJS from "../../assets/icons/NextJS-logo.png";
+import nodeJS from "../../assets/icons/nodejs-logo.png";
+import react from "../../assets/icons/React-logo.png";
+import express from "../../assets/icons/express-logo.png";
+import sql from "../../assets/icons/sql-logo.png";
+import typescript from "../../assets/icons/typescript-logo.png";
+import { useInView } from "react-intersection-observer";
+import { Box, Stack, Typography, Grow, Tooltip, Grid } from "@mui/material";
 
-import backEnd from '../../assets/images/backend-icon.png';
-import { frontEndArray, tools, backend } from "../../utils/tools.js";
-import { faBluetooth } from '@fortawesome/free-solid-svg-icons';
-import graphQl from '../../assets/icons/graphql.svg';
-import mySQL from '../../assets/icons/mysql_icon.png';
-import { faJs, faReact, faHtml5, faCss3, faBootstrap, faAngular, faJava, faNodeJs, faPython, faAws  } from "@fortawesome/free-brands-svg-icons"
-import  { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+const Skills = () => {
+  const { ref, inView } = useInView();
 
- const Skills = () => {
+  const frontendItems = [
+    {
+      title: "Javascript",
+      height: 60,
+      width: 60,
+      src: javascript,
+    },
+    {
+      title: "HTML",
+      height: 60,
+      width: 60,
+      src: html,
+    },
+    {
+      title: "React",
+      height: 60,
+      width: 70,
+      src: react,
+    },
+    {
+      title: "CSS",
+      height: 60,
+      width: 45,
+      src: css,
+    },
+    {
+      title: "Typescript",
+      height: 60,
+      width: 60,
+      src: typescript,
+    },
+  ];
 
-    const [changeList, setChangeList ] = useState(false);
+  const backendItems = [
+    {
+      title: "NodeJS",
+      height: 60,
+      width: 75,
+      src: nodeJS,
+    },
+    {
+      title: "SQL",
+      height: 60,
+      width: 70,
+      src: sql,
+    },
+    {
+      title: "mySQL",
+      height: 60,
+      width: 70,
+      src: mySQL,
+    },
+    {
+      title: "MongoDB",
+      height: 60,
+      width: 80,
+      src: mongoDB,
+    },
+    {
+      title: "AWS",
+      height: 60,
+      width: 85,
+      src: aws,
+    },
+  ];
 
-    const handleClick = () => {
-      if (changeList) {
-        setChangeList(false);
-      } else {
-        setChangeList(true);
-      }
-       
-    }
-
+  const toolItems = [
+    {
+      title: "Bootstrap",
+      height: 60,
+      width: 60,
+      src: bootstrap,
+    },
+    {
+      title: "Material-UI",
+      height: 60,
+      width: 85,
+      src: materialUI,
+    },
+    {
+      title: "NextJS",
+      height: 60,
+      width: 75,
+      src: nextJS,
+    },
+    {
+      title: "Node Express",
+      height: 60,
+      width: 95,
+      src: express,
+    },
+  ];
 
   return (
-    <div className="skills" id="skills">
-    <div className="container">
-    <div className='skills-title'>
-      <h2>SKILLS</h2>
-    </div>
-{/* 
-    {!changeList ? 
-      <div className="message">
-      <h6>Click the picture to change to <span>backend</span> skills.</h6>
-      </div>
-      :
-      <div className='message'>
-      <h6>Click the picture to change to <span>frontend</span> skills.</h6>
-      </div>
-    } */}
-    <div className="row skills-circle">
+    <Box className="skills" id="skills" sx={{ display: "flex", my: 10 }}>
+      <Box ref={ref} className={inView ? "container" : ""}>
+        <Box
+          ref={ref}
+          className={inView ? "skills-title" : ""}
+          sx={{
+            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            mt: 5,
+            mb: 5,
+          }}
+        >
+          <h2>SKILLS</h2>
+        </Box>
 
-  
-    
-    <div className="row">
+        <Box sx={{ width: "100%", mb: 5 }}>
+          <Typography variant="h6">Front End</Typography>
+        </Box>
 
- 
+        <Grid container spacing={1}  sx={{ mb: 5, justifyContent: 'center', width: '80%'}}>
+          {frontendItems.map((item) => (
+            <Grid item xs={4} md={2}>
+            <Tooltip title={item.title} arrow>
+              <Grow
+                in={inView}
+                timeout={3000}
+                style={{ transitionDelay: inView ? "250ms" : "0ms" }}
+              >
+                <Box>
+                  <Box
+                    component="img"
+                    src={item.src}
+                    sx={{
+                      width: item.width,
+                      transition: "0.3s",
+                      "&:hover": {
+                        transform: "scale(1.3)",
+                      },
+                    }}
+                  />
+                </Box>
+              </Grow>
+            </Tooltip>
+            </Grid>
+          ))}
+        </Grid>
 
-    {!changeList ? 
-      
-      <>
-     
-      {/* <div className="iconPic" onClick={handleClick}>
-          <img src={frontEnd} />
-        </div> */}
-        <div className="skills-section col"> 
-        <div className="icon-div deg0 ">
-        <FontAwesomeIcon className="icon" icon={faJs} />
-        <span className="caption">Javascript</span>
-        </div>
-        <div className="icon-div deg45">
-        <FontAwesomeIcon className="icon" icon={faReact} />
-        <span className="caption">React</span>
-        </div>
-        <div className="icon-div deg135">
-        <FontAwesomeIcon className="icon" icon={faHtml5} />
-        <span className="caption row">HTML</span>
-        </div>
-        <div className="icon-div deg180">
-        <FontAwesomeIcon className="icon" icon={faCss3} />
-        <span className="caption row">CSS</span>
-        </div>
-        <div className="icon-div deg225">
-        <FontAwesomeIcon className="icon" icon={faBootstrap} />
-        <span className="caption row">Bootstrap</span>
-        </div>
-        <div className="icon-div deg315">
-        <FontAwesomeIcon className="icon" icon={faAngular} />
-        <span className="caption row">Angular</span>
-        </div>
-        <div className="icon-div deg45">
-        <FontAwesomeIcon className="icon" icon={faJava} />
-        <span className="caption">Java</span>
-        </div>
-        <div className="icon-div deg135">
-        <FontAwesomeIcon className="icon" icon={faNodeJs} />
-        <span className="caption row">NodeJs</span>
-        </div>
-        <div className="icon-div deg0 ">
-        <FontAwesomeIcon className="icon" icon={faPython} />
-        <span className="caption">Python</span>
-        </div>
-        <div className="icon-div deg0 ">
-        <FontAwesomeIcon className="icon" icon={faAws} />
-        <span className="caption">AWS</span>
-        </div>
-        </div>
-        
-        </>
-       
-        : 
-        <>
-          
-        <div className="iconPic" onClick={handleClick}>
-          <img src={backEnd} />
-        </div>
-        <div className="skills-section col"> 
-        
-       
-        </div>
+        <Box sx={{ width: "100%", mb: 5 }}>
+          <Typography variant="h6">Back End</Typography>
+        </Box>
 
-        </>
-    }
-    </div>
-    </div>
-  </div>
-  </div>
-  )
-}
+        <Grid container spacing={1} sx={{ mb: 5, justifyContent: 'center', width: '80%' }}>
+          {backendItems.map((item) => (
+            <Grid item xs={4} md={2}>
+            <Tooltip title={item.title} arrow>
+              <Grow
+                in={inView}
+                timeout={3000}
+                style={{ transitionDelay: inView ? "1000ms" : "0ms" }}
+              >
+                <Box>
+                  <Box
+                    component="img"
+                    src={item.src}
+                    sx={{
+                      width: item.width,
+                      transition: "0.3s",
+                      "&:hover": {
+                        transform: "scale(1.3)",
+                      },
+                    }}
+                  />
+                </Box>
+              </Grow>
+            </Tooltip>
+            </Grid>
+          ))}
+        </Grid>
+
+        <Box sx={{ width: "100%", mb: 5 }}>
+          <Typography variant="h6">Frameworks</Typography>
+        </Box>
+
+        <Grid container spacing={1} sx={{ mb: 5, justifyContent: 'center', width: '80%' }}>
+          {toolItems.map((item) => (
+            <Grid item xs={4} md={2}>
+            <Tooltip title={item.title} arrow>
+              <Grow
+                in={inView}
+                timeout={3000}
+                style={{ transitionDelay: inView ? "2000ms" : "0ms" }}
+              >
+                <Box>
+                  <Box
+                    component="img"
+                    src={item.src}
+                    sx={{
+                      width: item.width,
+                      transition: "0.3s",
+                      "&:hover": {
+                        transform: "scale(1.3)",
+                      },
+                    }}
+                  />
+                </Box>
+              </Grow>
+            </Tooltip>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+    </Box>
+  );
+};
 
 export default Skills;

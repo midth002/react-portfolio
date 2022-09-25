@@ -1,17 +1,28 @@
 @import "../../global.scss";
 
-div {
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
 
-    .row {
+.project-list-container {
 
+    
+
+    .project-list-row {
+        height: 85vh;
+        margin: 150px 0;
+        animation: fadeIn 2s;
         display: flex;
         justify-content: center;
         
         .image {
 
-            width: 45%;
+            width: 40%;
+            animation: fadeIn 2s;
             
             img {
+                
                 z-index: -1;
                 width: 100%;
                 height: 350px;
@@ -27,6 +38,7 @@ div {
         }
 
         .description {  
+           animation: fadeIn 2s;
            width: 40%;
            position: relative;
            display: flex;
@@ -36,9 +48,14 @@ div {
            top: -75px;
            flex-wrap: wrap;
            z-index: 2;
+
+           .description-project-title-div {
+            animation: fadeIn 3s;
+         
+           }
          
            .summary {
-               
+               animation: fadeIn 2s;
                background-color: $lightestNavy;
                padding: 2rem;
                border-radius: 25px;
