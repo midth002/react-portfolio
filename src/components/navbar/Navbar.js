@@ -5,7 +5,7 @@ import Hamburger from "./hamburger/Hamburger";
 import Menu from "./menu/Menu.js";
 import logo from "../../assets/icons/AM.png";
 import { Link } from "react-scroll";
-import { Button, Box, Container } from "@mui/material";
+import { Button, Box } from "@mui/material";
 import { Article } from "@mui/icons-material";
 
 const Navbar = () => {
@@ -45,6 +45,9 @@ const Navbar = () => {
         }
       >
         <Box className="container-fluid">
+      
+
+          
           <Link
             to="header"
             className="navbar-brand logos"
@@ -55,8 +58,12 @@ const Navbar = () => {
             duration={1500}
             delay={500}
           >
+        
             <img src={logo} alt="logo" />
+          
           </Link>
+
+          
 
           {width < 900 ? (
             <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />

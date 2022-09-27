@@ -11,9 +11,9 @@ import {
  
 } from "@mui/material";
 
+import {Link as LinkToTop} from 'react-scroll';
+
 import { ArrowCircleUp } from "@mui/icons-material";
-
-
 
 
 const Contact = () => {
@@ -62,11 +62,26 @@ const Contact = () => {
             </Link>
           </Typography>
 
-          <Tooltip title="Back to the top" placement="right" sx={{ ml: 1 }}>
+          
+          <LinkToTop
+            to="header"
+            className="navbar-brand logos"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1500}
+            delay={500}
+          >
+           <Tooltip title="Back to the top" placement="right" sx={{ ml: 1 }}>
             <IconButton>
               <ArrowCircleUp fontSize="large" sx={{ color: "#3bd3b0" }} />
             </IconButton>
-          </Tooltip>
+          
+            </Tooltip>
+          </LinkToTop>
+          
+         
         </Box>
       </Stack>
     </Box>
