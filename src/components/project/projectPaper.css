@@ -39,18 +39,4 @@
     opacity: 1;
 }
 
-.project-paper-links {
-    position: absolute;
-    text-align: center;
-    top: 90%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    transition: 1s ease-in-out;
-    opacity: 0;
-    width: 100%;
-}
 
-.project-paper:hover .project-paper-links {
-    top: 70%;
-    opacity: 1;
-}
