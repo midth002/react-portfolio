@@ -5,19 +5,32 @@ import { Box, Typography, Button, Grid, Container} from '@mui/material';
 
 const About = () => {
   return (
-    <Container>
-    <Grid container spacing={1} id='about-me' sx={{ my: 5, overflowX: 'hidden', width: '50%' }}>
+    <Container sx={{mb: 10}}>
+    <Grid container spacing={1} id='about-me' sx={{ my: 5, overflowX: 'hidden', width: '100%', display: 'flex', justifyContent: 'center'}}>
 
         <Grid item md={6} xs={10} lg={6}>
-              <Typography variant="h2">About Me</Typography>
+              <Typography variant="h2" sx={{ mt: 2}}>About Me</Typography>
             
-            <Typography>
-                I am a aspiring software developer. I have experience as a IT support specialist so I have a jack of all trades. I am passionate about being a problem solver and what technology can do for our future. I have always enjoyed coding in my experience as I love the challenging aspects it can bring.  
+            <Typography sx={{ mt: 2}}>
+                I am a full stack software developer bringing knowledge across all stacks. 
+                I have experience as a IT support specialist so I have a jack of all trades. 
+                I am passionate about being a problem solver and what technology can do for our future. 
+                I have always enjoyed coding in my experience as I love the challenging aspects it can bring.  
+            </Typography>
+
+            <Typography sx={{ mt: 2}}>
+                With a degree in Management Information Systems from the University Of Minnesota, 
+                I have gained knowledge not only in the technology world, but as well as the business world. I have been working on web development projects since 2017.
+            </Typography>
+
+            <Typography sx={{ mt: 2}}>
+                Aside from being a developer, I love getting outside and doing activities like hiking, biking, golfing and getting on the water for some fun. 
+                I am passionate about my work, but also a team member first. I always strive for the team succeed with having a positive attitude and being able to have high interpersonal skills.
             </Typography>
   
         </Grid>
 
-        <Grid item md={4} lg={4} xs={8}>
+        <Grid item md={4} lg={4} xs={8} sx={{display: 'flex', alignItems: 'center', m: 5}}>
         <Box 
             component="img"
           
