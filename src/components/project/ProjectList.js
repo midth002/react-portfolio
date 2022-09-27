@@ -20,11 +20,11 @@ const ProjectList = ({ projects }) => {
     <Grid
       ref={ref}
       container
-      spacing={2}
-      sx={{ justifyContent: "center", p: 2, width:'100%'}}
+      spacing={4}
+      sx={{ justifyContent: "center", width:'100%', mb: 5}}
     >
       {projects.map((project) => (
-        <Grid item xs={12} md={5} lg={5} sx={{ width: '100%'}}>
+        <Grid item xs={12} md={4} lg={5} sx={{ width: '100%'}}>
           <Box 
           sx={{
               width: '100%',
