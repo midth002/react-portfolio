@@ -2,7 +2,7 @@
 
    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-   [Live Link](https://midth002.github.io/react-portfolio/)
+   [Live Link](https://andrewmidthunportfolio.netlify.app/)
   
   ## Table of Contents 
 
