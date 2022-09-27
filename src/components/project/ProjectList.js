@@ -10,6 +10,7 @@ import {
   Paper,
   Button,
 } from "@mui/material";
+import "./projectPaper.css";
 
 const ProjectList = ({ projects }) => {
   const { ref, inView } = useInView();
@@ -28,7 +29,7 @@ const ProjectList = ({ projects }) => {
           <Box 
           sx={{
               width: '100%',
-              height: 400,
+              height: 350,
           }}>
           <Paper
             ref={ref}
@@ -39,6 +40,7 @@ const ProjectList = ({ projects }) => {
               height: '100%',
               boxShadow: `0 6px 12px 0 #233554`,
               backgroundSize: 'cover',
+              backgroundPosition: 'center',
               backgroundRepeat: "no-repeat",
             }}
           >

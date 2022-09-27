@@ -1,5 +1,5 @@
 
-import "./contact.css";
+
 import {
   Box,
   Button,
