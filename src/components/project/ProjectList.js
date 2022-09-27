@@ -82,6 +82,8 @@ const ProjectList = ({ projects }) => {
 
               <Box sx={{ display: "flex", justifyContent: "center" }}>
                 <Button
+                  href={project.github}
+                  target="_blank"
                   sx={{
                     mr: 2,
                     bgcolor: "#233554",
@@ -95,6 +97,8 @@ const ProjectList = ({ projects }) => {
                   Github
                 </Button>
                 <Button
+                  href={project.url}
+                  target="_blank"
                   sx={{
                     bgcolor: "#233554",
                     "&:hover": {

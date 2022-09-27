@@ -15,8 +15,10 @@ const FabLinks = () => {
       <Stack spacing={2}>
         <Tooltip title="Github Profile" placement="right">
             <Fab 
-            color="primary"
-            size="medium"
+                color="primary"
+                size="medium"
+                href="https://github.com/midth002"
+                target="_blank"
                 sx={{
                     // bgcolor: '#249c80',
                     bgcolor: '#233554', 
@@ -34,8 +36,9 @@ const FabLinks = () => {
             <Fab  
             color="primary"
             size="medium"
+            href="https://www.linkedin.com/in/andrew-midthun/"
+            target="_blank"
                  sx={{
-                    // bgcolor: '#249c80',
                     bgcolor: '#233554', 
                     '&:hover': {
                         bgcolor: '#3bd3b0'
@@ -51,6 +54,7 @@ const FabLinks = () => {
              <Fab 
              color="primary"
              size="medium"
+             href={`mailto:midthun23@gmail.com`}
                  sx={{
                     // bgcolor: '#249c80',
                     bgcolor: '#233554', 
