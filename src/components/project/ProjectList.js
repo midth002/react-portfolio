@@ -1,4 +1,3 @@
-import "./projectList.scss";
 import { useInView } from "react-intersection-observer";
 import { GitHub, OpenInBrowser } from "@mui/icons-material";
 import {
@@ -22,19 +21,24 @@ const ProjectList = ({ projects }) => {
       ref={ref}
       container
       spacing={2}
-      sx={{ justifyContent: "center", p: 5 }}
+      sx={{ justifyContent: "center", p: 2, width:'100%'}}
     >
       {projects.map((project) => (
-        <Grid item xs={10} md={6} sx={{ justifyContent: "center" }}>
+        <Grid item xs={12} md={5} lg={5} sx={{ width: '100%'}}>
+          <Box 
+          sx={{
+              width: '100%',
+              height: 300,
+          }}>
           <Paper
             ref={ref}
             className="project-paper"
+            elevation={3} 
             style={{
               backgroundImage: `url(${project.image})`,
-              height: "350px",
-              width: "525px",
+              height: '100%',
               boxShadow: `0 6px 12px 0 #233554`,
-              backgroundSize: "cover",
+              backgroundSize: 'cover',
               backgroundRepeat: "no-repeat",
             }}
           >
@@ -126,6 +130,7 @@ const ProjectList = ({ projects }) => {
               </Typography>
             </Box>
           </Paper>
+          </Box>
         </Grid>
       ))}
     </Grid>

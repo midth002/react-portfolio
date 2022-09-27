@@ -12,16 +12,16 @@ const Project = () => {
 
   return (
     <Box className="projects" id="projects" sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-      <div className="project-title-container">
+      <Box className="project-title-container">
         <h1 ref={ref} className={inView ? "project-title" : ""}>
           Projects
         </h1>
-      </div>
+      </Box>
 
-      <Box sx={{ display: 'flex', justifyContent: 'center', width: '93%'}}>
-      <Stack direction="row" spacing={2}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%'}}>
+      
         <ProjectList projects={projectList} />
-        </Stack>
+       
       </Box>
     </Box>
   );

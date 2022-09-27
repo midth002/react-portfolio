@@ -1,16 +1,10 @@
 @import '../../../global.scss';
 
-   
-    
 
-
-
-
-@media screen and (max-width: 900px) {
     .mobile {
         display: flex;
         width: 100%;
-        justify-content: end;
+        justify-content: center;
         
     
     .hamburger {
@@ -21,7 +15,7 @@
         justify-content: space-between;
         cursor: pointer;
         position: relative;
-        left: 170%;
+       
         z-index: 5;
       
             .line { 
@@ -56,4 +50,4 @@
     }
 
 
-}
+
