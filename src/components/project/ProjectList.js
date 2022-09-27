@@ -28,7 +28,7 @@ const ProjectList = ({ projects }) => {
           <Box 
           sx={{
               width: '100%',
-              height: 300,
+              height: 400,
           }}>
           <Paper
             ref={ref}

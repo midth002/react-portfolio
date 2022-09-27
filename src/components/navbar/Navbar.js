@@ -14,13 +14,9 @@ const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
 
-  
   const getScreenSize = () => {
- 
-    setWidth(window.innerWidth)
-
-  }
-
+    setWidth(window.innerWidth);
+  };
 
   const changeBackground = () => {
     if (window.scrollY >= 200) {
@@ -33,7 +29,6 @@ const Navbar = () => {
   useEffect(() => {
     changeBackground();
 
-   
     // Call handler right away so state gets updated with initial window size
     window.addEventListener("resize", getScreenSize);
 
@@ -41,7 +36,7 @@ const Navbar = () => {
   }, []);
 
   return (
-      <>
+    <>
       <Box
         className={
           navbar
@@ -49,16 +44,7 @@ const Navbar = () => {
             : "navbar navbar-expand-lg position-fixed w-100"
         }
       >
-
-
-
-
-
-
-
         <Box className="container-fluid">
-
-
           <Link
             to="header"
             className="navbar-brand logos"
@@ -72,96 +58,89 @@ const Navbar = () => {
             <img src={logo} alt="logo" />
           </Link>
 
-          { width < 900 ? 
-          
-            (<Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />)
+          {width < 900 ? (
+            <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+          ) : (
+            <Box className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav d-flex align-items-center ">
+                <li>
+                  <Link
+                    to="projects"
+                    className="underline text-white"
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={1500}
+                    delay={500}
+                  >
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="skills"
+                    className="underline text-white"
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={1500}
+                    delay={500}
+                  >
+                    Skills
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="about-me"
+                    className="underline text-white"
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-50}
+                    duration={1500}
+                    delay={500}
+                  >
+                    About Me
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    activeClass="active"
+                    className="underline text-white"
+                    to="contact-me"
+                    spy={true}
+                    smooth={true}
+                    offset={-50}
+                    duration={1500}
+                    delay={500}
+                  >
+                    Contact Me
+                  </Link>
+                </li>
 
-            : 
-              
-           ( <Box className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav d-flex align-items-center ">
-              <li>
-                <Link
-                  to="projects"
-                  className="underline text-white"
-                  activeClass="active"
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={1500}
-                  delay={500}
+                <Button
+                  href={resume}
+                  target="_blank"
+                  variant="contained"
+                  startIcon={<Article />}
+                  sx={{
+                    bgcolor: "#233554",
+                    "&:hover": {
+                      bgcolor: "#3bd3b0",
+                    },
+                  }}
                 >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="skills"
-                  className="underline text-white"
-                  activeClass="active"
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={1500}
-                  delay={500}
-                >
-                  Skills
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="about-me"
-                  className="underline text-white"
-                  activeClass="active"
-                  spy={true}
-                  smooth={true}
-                  offset={-50}
-                  duration={1500}
-                  delay={500}
-                >
-                  About Me
-                </Link>
-              </li>
-              <li>
-                <Link
-                  activeClass="active"
-                  className="underline text-white"
-                  to="contact-me"
-                  spy={true}
-                  smooth={true}
-                  offset={-50}
-                  duration={1500}
-                  delay={500}
-                >
-                  Contact Me
-                </Link>
-              </li>
-
-              <Button
-                href={resume}
-                target="_blank"
-                variant="contained"
-                startIcon={<Article />}
-                sx={{
-                  bgcolor: "#233554",
-                  "&:hover": {
-                    bgcolor: "#3bd3b0",
-                  },
-                }}
-              >
-                Resume
-              </Button>
-            </ul>
-          </Box>
-           )
-          
-        }
-
-      
+                  Resume
+                </Button>
+              </ul>
+            </Box>
+          )}
         </Box>
       </Box>
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      </>
+    </>
   );
 };
 

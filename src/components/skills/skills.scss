@@ -18,26 +18,19 @@
     }
 }
 
-.skills {
-   
-    transition: all 2s ease;
-    
-    
-    text-align: center;
-   
-    width: 100%;
 
     .hidden {
         display: none;
     }
     
-    .container {
+    .skills {
         color: $lightestSlate;
         flex-wrap: wrap;
         display: flex;
         justify-content: center;
-
-     
+        width: '100%';
+        text-align: center;
+        transition: all 2s ease;
 
         .skills-title {
             
@@ -48,198 +41,11 @@
 
         }
         
-        .skills-circle {
-            
-          
-          
-            margin: 5%;
-            text-align: left;
-            width: 70%;
-
-            div {
-                h6 {
-                    margin-top: 0;
-                    font-style: italic;
-
-                    span {
-                        color: $brightGreen;
-                    }
-                }
-            }
-            
-
-                .skills-btn {
-                    
-                    padding: 10px;
-                    background-color: $brightGreen;
-                    border: 2px solid $brightGreen;
-                    border-radius: 5px;
-                    box-shadow: 7px 11px 29px -5px rgba(0,0,0,0.56);
-                    color: white;
-                    font-weight: bold; 
-
-                    &:hover {
-                        background-color: $lightestNavy;
-                        transition: 0.7s;
-                    }
-                }
-
-                
-
-                .row {
-                    display: flex; 
-                    justify-content: center;
-
-                    .iconPic {
-
-                        &:hover {
-                            opacity: 0.8;
-                        }
-
-                        img {
-                            width: 250px;
-                            border-radius: 25px;
-                            margin-right: 25px;
-                        }
-                    }
-                    
-                    
-
-                .backend-pic {
-                    width: 30%;
-                    position: relative;
-                    border: 2px solid $brightGreen;
-                    height: 250px;
-                    background-color: $darkGreen;
-            
-                    z-index: 2;
-                    
-                    &:hover {
-                        top: -25px;
-                        transition: 0.5s ease-in-out;
-                    }
-
-            }
-
-            .frontend-pic {
-                width: 30%;
-                position: relative;
-                left: -20%;
-                top: 25px;
-                border: 2px solid $lightestSlate;
-                height: 250px;
-                background-color: $lightestNavy;
-                opacity: 0.9;
-                z-index: 1;
-                &:hover {
-                    top: 15px;
-                }
-               
-            }
-
-                .skills-section {
-                   
-                    width: 70%;
-                    display: flex; 
-                    justify-content: center;
-                    flex-wrap: wrap;
-               
-                .icon-div {
-                    display: inline-block;
-                    justify-content: space-between;
-                    margin: 0 40px;
-                    height: 100px;
-                    width: 75px;
-                   
-     
-                    .caption {
-                
-                     color: $lightestNavy;
-        
-                    }
-
-                    .icon {
-                        animation: 2s ease-out 0s 1 slideInFromRight;
-                        width: 2.5em;
-                        height: 4em;
-                   
-                        &:hover {
-                            color: $brightGreen;
-                            width: 3em;
-                            transition: 0.5s;
-                         
-                        }
-                    }
-
-                  
-
-                    &:hover {
-
-                           
-                        .caption {
-                            color: $lightestSlate;
-                            display: block;
-                            -webkit-animation: fadeIn 1s;
-                            animation: fadeIn 1s;
-                           
-                         
-                        }
-                    }
-                   
-                
-                }
-
-            
-                    
-                    img {
-                        width: 175px;
-                        border-radius: 50px;
-                    }
-
-                }
-
-                
-                
-            }
-
-            }
-
-        
-        }
     }
+            
 
-    @media screen and (max-width: 995px) {
-        .skills {
-                    
-                    &::before {
-                    transform: none;
-                    }
-    
-                    &::after {
-                        transform: none;
-                    }
-    
-                    .container {
-                       .skills-circle {
-                           width: 95%;
+                
 
-                           .message {
-                               width: 100%;
-                           }
-                           .row {
-
-                            display: flex;
-                            flex-wrap: wrap;
-                            align-items: center;
-                               .skills-section {
-                                   width: 90%;
-                               }
-
-                           
-                           }
-                       }
-                    }
-                }
-            }
+                
 
 

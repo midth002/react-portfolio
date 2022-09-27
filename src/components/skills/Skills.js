@@ -114,8 +114,8 @@ const Skills = () => {
   ];
 
   return (
-    <Box className="skills" id="skills" sx={{ display: "flex", my: 10 }}>
-      <Box ref={ref} className={inView ? "container" : ""}>
+   
+      <Box ref={ref} id="skills" className={inView ? "container skills" : ""} sx={{ display: "flex", my: 10 }}>
         <Box
           ref={ref}
           className={inView ? "skills-title" : ""}
@@ -134,9 +134,9 @@ const Skills = () => {
           <Typography variant="h6">Front End</Typography>
         </Box>
 
-        <Grid container spacing={1}  sx={{ mb: 5, justifyContent: 'center', width: '80%'}}>
+        <Grid container spacing={1}  sx={{ mb: 5, justifyContent: 'center', width: '100%'}}>
           {frontendItems.map((item) => (
-            <Grid item xs={4} md={2}>
+            <Grid item xs={4} md={2} lg={2}>
             <Tooltip title={item.title} arrow>
               <Grow
                 in={inView}
@@ -226,7 +226,6 @@ const Skills = () => {
           ))}
         </Grid>
       </Box>
-    </Box>
   );
 };
 

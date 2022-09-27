@@ -1,6 +1,9 @@
-import "./menu.scss"
+import "./menu.scss";
+import resume from "../../../assets/resume/Resume.pdf";
 import { Link } from 'react-scroll';
-
+import { Button } from '@mui/material';
+import { Article } from "@mui/icons-material";
+ 
 export default function Menu({ menuOpen, setMenuOpen }) {
     return (
         <div className={"menu " + (menuOpen && "active")}>
@@ -39,6 +42,23 @@ export default function Menu({ menuOpen, setMenuOpen }) {
                     >
                     Contact
                     </Link>
+                </li>
+                <li>
+
+                <Button
+                  href={resume}
+                  target="_blank"
+                  variant="contained"
+                  startIcon={<Article />}
+                  sx={{
+                    bgcolor: "#3bd3b0",
+                    '&:hover': {
+                        color: 'white!important'
+                    }
+                  }}
+                >
+                  Resume
+                </Button>
                 </li>
             </ul>
 
