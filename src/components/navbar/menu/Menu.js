@@ -1,5 +1,4 @@
 import "./menu.scss";
-import resume from "../../../assets/resume/Resume.pdf";
 import { Link } from 'react-scroll';
 import { Button } from '@mui/material';
 import { Article } from "@mui/icons-material";
@@ -46,7 +45,7 @@ export default function Menu({ menuOpen, setMenuOpen }) {
                 <li>
 
                 <Button
-                  href={resume}
+                  href="Resume.pdf"
                   target="_blank"
                   variant="contained"
                   startIcon={<Article />}

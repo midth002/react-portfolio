@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.scss";
-import resume from "../../assets/resume/Resume.pdf";
+
 import Hamburger from "./hamburger/Hamburger";
 import Menu from "./menu/Menu.js";
 import logo from "../../assets/icons/AM.png";
@@ -128,7 +128,7 @@ const Navbar = () => {
                 </li>
 
                 <Button
-                  href={resume}
+                  href="Resume.pdf"
                   target="_blank"
                   variant="contained"
                   startIcon={<Article />}
