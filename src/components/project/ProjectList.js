@@ -35,9 +35,9 @@ const ProjectList = ({ projects }) => {
             ref={ref}
             className="project-paper"
             elevation={3} 
-            style={{
+            sx={{
               backgroundImage: `url(${project.image})`,
-              position: 'relative!important',
+              position: 'relative',
               height: '100%',
               boxShadow: `0 6px 12px 0 #233554`,
               backgroundSize: 'cover',
