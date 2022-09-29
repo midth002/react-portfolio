@@ -8,10 +8,10 @@
 
 
 
-.project-paper::before {
+.project-paper:before {
     content: "";
     background: linear-gradient(90.21deg,  #233554 -5.91%,#249c80 111.58%);
-    opacity: 0.85;
+    opacity: 0.80;
     position: absolute;
     width: 100%;
     left: 0;
@@ -19,7 +19,7 @@
     transition: 0.4s ease-in-out;
 }
 
-.project-paper:hover::before {
+.project-paper:hover:before {
     height: 100%;
 }
 
