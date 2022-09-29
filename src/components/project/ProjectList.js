@@ -37,6 +37,7 @@ const ProjectList = ({ projects }) => {
             elevation={3} 
             style={{
               backgroundImage: `url(${project.image})`,
+              position: 'relative!important',
               height: '100%',
               boxShadow: `0 6px 12px 0 #233554`,
               backgroundSize: 'cover',
