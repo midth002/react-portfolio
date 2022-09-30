@@ -146,7 +146,7 @@ const Navbar = () => {
           )}
         </Box>
       </Box>
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Menu menuOpen={menuOpen} />
     </>
   );
 };

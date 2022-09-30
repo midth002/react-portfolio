@@ -1,23 +1,15 @@
-import { useState, useEffect } from 'react';
 import "./header.scss";
-import Navbar from '../navbar/Navbar';
 
- const Header = () => {
-
-  
-
-
+const Header = () => {
   return (
     <div class="jumbotron d-flex mx-auto" id="header">
-    
-
-              <div class="title">
-                <p>Hello, my name is</p>
-                <h2 id="name">Andrew Midthun.</h2>
-                <h2 className='details-me'>I'm a full stack developer.</h2>
+      <div class="title">
+        <p>Hello, my name is</p>
+        <h2 id="name">Andrew Midthun.</h2>
+        <h2 className="details-me">I'm a full stack developer.</h2>
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
 export default Header;

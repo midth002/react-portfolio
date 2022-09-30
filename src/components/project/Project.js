@@ -2,7 +2,7 @@
 import ProjectList from "./ProjectList";
 import { projectList } from "../../utils/data";
 import { useInView } from "react-intersection-observer";
-import { Box, Stack } from "@mui/material";
+import { Box} from "@mui/material";
 
 
 const Project = () => {

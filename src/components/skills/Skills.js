@@ -15,7 +15,7 @@ import express from "../../assets/icons/express-logo.png";
 import sql from "../../assets/icons/sql-logo.png";
 import typescript from "../../assets/icons/typescript-logo.png";
 import { useInView } from "react-intersection-observer";
-import { Box, Stack, Typography, Grow, Tooltip, Grid } from "@mui/material";
+import { Box, Typography, Grow, Tooltip, Grid } from "@mui/material";
 
 const Skills = () => {
   const { ref, inView } = useInView();
