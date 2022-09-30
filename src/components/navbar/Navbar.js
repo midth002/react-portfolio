@@ -3,7 +3,7 @@ import "./navbar.scss";
 
 import Hamburger from "./hamburger/Hamburger";
 import Menu from "./menu/Menu.js";
-import logo from "../../assets/icons/AM.png";
+import logo from "../../assets/icons/AM.webp";
 import { Link } from "react-scroll";
 import { Button, Box } from "@mui/material";
 import { Article } from "@mui/icons-material";
