@@ -6,7 +6,6 @@ import Skills from "./components/skills/Skills";
 import Project from './components/project/Project';
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
-import Sidebar from "./components/sidebar/sidebar";
 import Fab from "./components/fab/Fab";
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
     <Project />
     <Skills />
     <Contact />
-    <Sidebar />
     <Fab />
     </>
   );
