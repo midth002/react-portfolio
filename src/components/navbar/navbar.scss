@@ -21,7 +21,7 @@
 
     
          .logos {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: $brightGreen;
             font-weight: bold;
             text-decoration: none;
@@ -31,7 +31,7 @@
 
             img {
                 padding-top: 1%;
-                width: 150px;
+                width: 125px;
                 transition: all 500ms ease-in-out;
                 &:hover {
                     transform:  rotate(-45deg);

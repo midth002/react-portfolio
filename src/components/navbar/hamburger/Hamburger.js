@@ -5,7 +5,7 @@ import { Box } from '@mui/material'
 const hamburger = ({ menuOpen, setMenuOpen }) => {
   return (
    
-    <Box sx={{ display: 'flex', justifyContent: 'end'}} className={'mobile ' + (menuOpen && 'active' )}>
+    <Box sx={{ display: 'flex', justifyContent: 'end', width: '80%', pr: 5}} className={menuOpen && 'active' }>
 
    
 
