@@ -1,9 +1,37 @@
+import { useState, useEffect } from 'react';
 import { Fab, Stack, Box, Tooltip } from "@mui/material";
 import { GitHub, LinkedIn, Email } from "@mui/icons-material";
 
 const FabLinks = () => {
+
+
+    const [fab, setFab] = useState(false);
+    const [width, setWidth] = useState(false);
+
+    const getScreenSize = () => {
+        setWidth(window.innerWidth);
+      };
+
+
+
+
+      useEffect(() => {
+    
+        // Call handler right away so state gets updated with initial window size
+        window.addEventListener("resize", getScreenSize);
+      }, []);
+
+     
+      console.log(width)
+
+
+
   return (
-    <Box
+    <>
+
+    { width > 982 && 
+
+        <Box
         sx={{
             position: "fixed",
             top: '35%',
@@ -18,7 +46,6 @@ const FabLinks = () => {
                 href="https://github.com/midth002"
                 target="_blank"
                 sx={{
-                    // bgcolor: '#249c80',
                     bgcolor: '#233554', 
                     '&:hover': {
                         bgcolor: '#3bd3b0'
@@ -67,6 +94,14 @@ const FabLinks = () => {
         </Tooltip>
       </Stack>
     </Box>
+
+
+
+
+
+    }
+  
+    </>
   );
 };
 

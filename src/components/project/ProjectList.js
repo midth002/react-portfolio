@@ -28,7 +28,7 @@ const ProjectList = ({ projects }) => {
       sx={{ justifyContent: "center",  mb: 5}}
     >
       {projects.map((project) => (
-        <Grid item xs={12} md={4} lg={5}>
+        <Grid item xs={12} md={4} lg={5} sx={{ display: 'flex', justifyContent: 'center'}}>
           <Box 
           sx={{
               width: 500,
@@ -43,7 +43,6 @@ const ProjectList = ({ projects }) => {
             elevation={3} 
             sx={{
               backgroundImage: `url(${project.image})`,
-              position: 'relative',
               height: '100%',
               boxShadow: `0 6px 12px 0 #233554`,
               backgroundSize: 'cover',

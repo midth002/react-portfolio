@@ -68,7 +68,7 @@ const Navbar = () => {
 
           
 
-          {width < 900 ? (
+          {width < 982 ? (
             <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           ) : (
             <Box className="collapse navbar-collapse" id="navbarNav">
