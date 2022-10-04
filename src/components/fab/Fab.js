@@ -14,8 +14,6 @@ const FabLinks = () => {
     window.addEventListener("resize", getScreenSize);
   }, []);
 
-  console.log(width);
-
   return (
     <>
       {width > 982 && (

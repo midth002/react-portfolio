@@ -14,9 +14,6 @@ const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
 
-
-
-
   const getScreenSize = () => {
     setWidth(window.innerWidth);
   };
@@ -40,17 +37,8 @@ const Navbar = () => {
 
   return (
     <>
-      <Box
-        className={
-          navbar
-            ? "navbar active-nav"
-            : "navbar"
-        }
-      >
+      <Box className={navbar ? "navbar active-nav" : "navbar"}>
         <Box className="container-fluid">
-      
-
-          
           <Link
             to="header"
             className="navbar-brand logos"
@@ -61,12 +49,8 @@ const Navbar = () => {
             duration={1500}
             delay={500}
           >
-        
             <img src={logo} alt="logo" />
-          
           </Link>
-
-          
 
           {width < 982 ? (
             <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
