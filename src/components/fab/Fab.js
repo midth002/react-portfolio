@@ -1,5 +1,3 @@
-import React from "react";
-import "./fab.scss"
 import { Fab, Stack, Box, Tooltip } from "@mui/material";
 import { GitHub, LinkedIn, Email } from "@mui/icons-material";
 
@@ -56,7 +54,6 @@ const FabLinks = () => {
              size="medium"
              href={`mailto:midthun23@gmail.com`}
                  sx={{
-                    // bgcolor: '#249c80',
                     bgcolor: '#233554', 
                     '&:hover': {
                         bgcolor: '#3bd3b0'

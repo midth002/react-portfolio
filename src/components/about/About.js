@@ -1,7 +1,6 @@
 import React from 'react';
 import me from "../../assets/images/LinkedInPicture2.jpg";
-
-import { Box, Typography, Button, Grid, Container} from '@mui/material';
+import { Box, Typography, Grid, Container} from '@mui/material';
 
 const About = () => {
   return (

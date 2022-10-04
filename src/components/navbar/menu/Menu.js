@@ -1,11 +1,11 @@
 import "./menu.scss";
 import { Link } from "react-scroll";
-import { Button } from "@mui/material";
+import { Button, Box} from "@mui/material";
 import { Article } from "@mui/icons-material";
 
 export default function Menu({ menuOpen, setMenuOpen }) {
   return (
-    <div className={"menu " + (menuOpen && "active")}>
+    <Box className={"menu " + (menuOpen && "active")}>
       <ul>
         <li>
           <Link to="header" onClick={() => setMenuOpen(false)}>
@@ -49,6 +49,6 @@ export default function Menu({ menuOpen, setMenuOpen }) {
           </Button>
         </li>
       </ul>
-    </div>
+    </Box>
   );
 }

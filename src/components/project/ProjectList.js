@@ -12,6 +12,9 @@ import {
 } from "@mui/material";
 import "./projectPaper.css";
 
+
+
+
 const ProjectList = ({ projects }) => {
   const { ref, inView } = useInView();
 
@@ -22,14 +25,17 @@ const ProjectList = ({ projects }) => {
       ref={ref}
       container
       spacing={4}
-      sx={{ justifyContent: "center", width:'100%', mb: 5}}
+      sx={{ justifyContent: "center",  mb: 5}}
     >
       {projects.map((project) => (
-        <Grid item xs={12} md={4} lg={5} sx={{ width: '100%'}}>
+        <Grid item xs={12} md={4} lg={5}>
           <Box 
           sx={{
-              width: '100%',
+              width: 500,
               height: 350,
+              '@media (max-width: 500px)' : {
+                    width: 300
+                    } 
           }}>
           <Paper
             ref={ref}
@@ -124,8 +130,7 @@ const ProjectList = ({ projects }) => {
                 top: "87%",
                 py: 1.5,
                 textAlign: "center",
-                width: "35%",
-                
+                width: "40%",
                 borderTopRightRadius: "10px",
               }}
             >

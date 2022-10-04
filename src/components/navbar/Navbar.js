@@ -14,6 +14,9 @@ const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
 
+
+
+
   const getScreenSize = () => {
     setWidth(window.innerWidth);
   };
@@ -40,8 +43,8 @@ const Navbar = () => {
       <Box
         className={
           navbar
-            ? "navbar navbar-expand-lg position-fixed w-100 active"
-            : "navbar navbar-expand-lg position-fixed w-100"
+            ? "navbar active-nav"
+            : "navbar"
         }
       >
         <Box className="container-fluid">

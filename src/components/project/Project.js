@@ -10,7 +10,7 @@ const Project = () => {
   const { ref, inView } = useInView();
 
   return (
-    <Box  id="projects" sx={{overflowX: 'hidden', mb: 10}}>
+    <Box id="projects" sx={{overflowX: 'hidden', mb: 10}}>
       <Box className="project-title-container" sx={{ textAlign: 'center'}}>
         <h1 ref={ref} className={inView ? "project-title" : ""}>
           Projects
