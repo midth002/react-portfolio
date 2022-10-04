@@ -33,6 +33,7 @@ const ProjectList = ({ projects }) => {
           sx={{
               width: 500,
               height: 350,
+              position: 'relative',
               '@media (max-width: 500px)' : {
                     width: 300
                     } 
