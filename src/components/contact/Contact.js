@@ -43,6 +43,7 @@ const Contact = () => {
             href="mailto: midthun23@gmail.com"
             className="email-link"
             underline="hover"
+            color="#3bd3b0"
           >
             midthun23@gmail.com
           </Link>
@@ -56,8 +57,8 @@ const Contact = () => {
           </Typography>
         </Box>
 
-        <Button variant="outlined">
-          <Link href="mailto: midthun23@gmail.com" underline="none">
+        <Button variant="outlined" sx={{ borderColor: '#3bd3b0'}}>
+          <Link href="mailto: midthun23@gmail.com" underline="none" color="white">
             Say Hello
           </Link>
         </Button>
@@ -66,6 +67,7 @@ const Contact = () => {
             <Link
               href="https://github.com/midth002/react-portfolio"
               underline="hover"
+              color="#3bd3b0"
             >
               Designed and Built by Andrew Midthun
             </Link>
