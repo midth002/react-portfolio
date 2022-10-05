@@ -1,5 +1,5 @@
 
-
+import './contactDivider.css';
 import {
   Box,
   Button,
@@ -20,9 +20,18 @@ const Contact = () => {
   
 
   return (
+    <>
+
+    <Box className="shapedividers_com-6970" sx={{ backgroundColor: '#495670', height: 200}}>
+
+    </Box>
+
+
+
     <Box
-      sx={{ display: "flex", justifyContent: "center", my: 3 }}
+      sx={{ display: "flex", justifyContent: "center", pb: 3, backgroundColor: '#495670'}}
       id="contact-me"
+      className="shapedividers_com-2111"
     >
       <Stack
         spacing={4}
@@ -85,6 +94,9 @@ const Contact = () => {
         </Box>
       </Stack>
     </Box>
+   
+
+   </>
   );
 };
 

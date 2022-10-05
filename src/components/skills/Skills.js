@@ -17,6 +17,7 @@ import typescript from "../../assets/icons/typescript-logo.webp";
 import { useInView } from "react-intersection-observer";
 import { Box, Typography, Grow, Tooltip, Grid } from "@mui/material";
 
+
 const Skills = () => {
   const { ref, inView } = useInView();
 
@@ -115,7 +116,7 @@ const Skills = () => {
 
   return (
    
-      <Box ref={ref} id="skills" className={inView ? "container skills" : ""} sx={{ display: "flex", my: 10 }}>
+      <Box ref={ref} id="skills" className={inView ? "container skills shapedividers_com-4549" : ""} sx={{ display: "flex", mt: 10 }}>
         <Box
           ref={ref}
           className={inView ? "skills-title" : ""}
