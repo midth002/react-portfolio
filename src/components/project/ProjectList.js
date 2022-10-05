@@ -1,4 +1,4 @@
-import { useInView } from "react-intersection-observer";
+import { useState, useEffect, useRef } from 'react';
 import { GitHub, OpenInBrowser } from "@mui/icons-material";
 import {
   Grid,
@@ -13,22 +13,51 @@ import {
 import "./projectPaper.css";
 
 
+function FadeInSection(props) {
+  const [isVisible, setVisible] = useState(false);
+  const domRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(`entry`, entry, `is = ${entry.isIntersecting}`);
+        setVisible(entry.isIntersecting);
+      });
+    });
+
+    const { current } = domRef;
+    observer.observe(current);
+
+    return () => observer.unobserve(current);
+  }, []);
+  return (
+    <Grid item xs={12} md={4} lg={5} sx={{ display: 'flex', justifyContent: 'center'}}
+    ref={domRef}
+    className={`fade-in-section-right ${isVisible ? "is-visible" : ""}`}
+    >
+      {props.children}
+   </Grid>
+  );
+}
+
+
+
 
 
 const ProjectList = ({ projects }) => {
-  const { ref, inView } = useInView();
+
 
  
 
   return (
     <Grid
-      ref={ref}
+      
       container
       spacing={4}
-      sx={{ justifyContent: "center",  mb: 5}}
+      sx={{ justifyContent: "center",  my: 8}}
     >
       {projects.map((project) => (
-        <Grid item xs={12} md={4} lg={5} sx={{ display: 'flex', justifyContent: 'center'}}>
+        <FadeInSection>
           <Box 
           sx={{
               width: 500,
@@ -39,7 +68,7 @@ const ProjectList = ({ projects }) => {
                     } 
           }}>
           <Paper
-            ref={ref}
+           
             className="project-paper"
             elevation={3} 
             sx={{
@@ -143,7 +172,7 @@ const ProjectList = ({ projects }) => {
             </Box>
           </Paper>
           </Box>
-        </Grid>
+        </FadeInSection>
       ))}
     </Grid>
   );
