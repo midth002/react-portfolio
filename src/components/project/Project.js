@@ -2,7 +2,7 @@
 import ProjectList from "./ProjectList";
 import { projectList } from "../../utils/data";
 import { useInView } from "react-intersection-observer";
-import { Box} from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 
 
 const Project = () => {
@@ -10,11 +10,11 @@ const Project = () => {
   const { ref, inView } = useInView();
 
   return (
-    <Box id="projects" sx={{overflowX: 'hidden', mb: 10}}>
-      <Box className="project-title-container" sx={{ textAlign: 'center'}}>
-        <h1 ref={ref} className={inView ? "project-title" : ""}>
+    <Container id="projects" sx={{ width: '100%', mb: 10}}>
+      <Box sx={{ textAlign: 'center'}}>
+        <Typography variant="h2" ref={ref}>
           Projects
-        </h1>
+        </Typography>
       </Box>
 
       <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%', overflowX: 'hidden'}}>
@@ -22,7 +22,7 @@ const Project = () => {
         <ProjectList projects={projectList} />
        
       </Box>
-    </Box>
+    </Container>
   );
 };
 

@@ -7,6 +7,7 @@ import Project from './components/project/Project';
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import Fab from "./components/fab/Fab";
+import { Container } from '@mui/material'
 
 
 function App() {
@@ -14,14 +15,13 @@ function App() {
   
   return (
     <>
-   
-    <Navbar />
-    <Header />
-    <About />
-    <Project />
-    <Skills />
-    <Contact />
-    <Fab />
+      <Navbar />
+      <Header />
+      <About />
+      <Project />
+      <Skills />
+      <Contact />
+      <Fab />
     </>
   );
 }
