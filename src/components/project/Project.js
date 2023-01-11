@@ -10,7 +10,7 @@ const Project = () => {
   const { ref, inView } = useInView();
 
   return (
-    <Container id="projects" sx={{ width: '100%', mb: 10}}>
+    <Box id="projects" sx={{ width: '100%'}}>
       <Box sx={{ textAlign: 'center'}}>
         <Typography variant="h2" ref={ref}>
           Projects
@@ -22,7 +22,7 @@ const Project = () => {
         <ProjectList projects={projectList} />
        
       </Box>
-    </Container>
+    </Box>
   );
 };
 

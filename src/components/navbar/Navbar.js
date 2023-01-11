@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.scss";
-
-import Hamburger from "./hamburger/Hamburger";
-import Menu from "./menu/Menu.js";
+import Drawer from "./menu/Menu.js";
 import logo from "../../assets/icons/AM.webp";
 import { Link } from "react-scroll";
 import { Button, Box } from "@mui/material";
 import { Article } from "@mui/icons-material";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+
 
   const [navbar, setNavbar] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
@@ -53,7 +51,7 @@ const Navbar = () => {
           </Link>
 
           {width < 982 ? (
-            <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <Drawer />
           ) : (
             <Box className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav d-flex align-items-center ">
@@ -133,7 +131,7 @@ const Navbar = () => {
           )}
         </Box>
       </Box>
-      <Menu menuOpen={menuOpen} />
+      
     </>
   );
 };

@@ -37,7 +37,7 @@ const Contact = () => {
         spacing={4}
         sx={{ justifyContent: "center", width: "40%", textAlign: "center" }}
       >
-        <Typography variant="h3">Get In Touch</Typography>
+        <Typography variant="h3" sx={{color: '#cbd0e4'}}>Get In Touch</Typography>
         <Box>
           <Link
             href="mailto: midthun23@gmail.com"
@@ -50,7 +50,7 @@ const Contact = () => {
         </Box>
 
         <Box>
-          <Typography variant="p">
+          <Typography variant="p" sx={{color: '#cbd0e4'}}>
             I am currently looking for a new opportunity. Whether you want to
             email me questions or connect with me, I will try my best to get
             back to you!

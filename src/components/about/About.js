@@ -8,9 +8,9 @@ import { gsap } from "gsap";
 
 const About = () => {
 
-  const sectionRef = useRef(null);
+  const aboutRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
+  const intersection = useIntersection(aboutRef, {
     root: null,
     rootMargin: "0px",
     threshold: 0.3
@@ -23,7 +23,7 @@ const About = () => {
       y: -60,
       ease: "power4.out", 
       stagger: {
-        amount: 0.2
+        amount: 0.8
       }
     });
   };
@@ -49,17 +49,22 @@ const About = () => {
 
 
   return (
-    <Grid container spacing={2}  sx={{ mb: 10 , pt: 10, justifyContent: 'center'}}>
+    <Grid container spacing={2} 
+   
+
+    
+     sx={{ mb: 10 , pt: 10, justifyContent: 'center', }}>
       
         <Grid item 
             xs={10} 
             lg={4}
-            ref={sectionRef}>
-          <Typography className="fadeIn" variant="h2" sx={{ mt: 2 }}>
+            ref={aboutRef}
+            >
+          <Typography className="fadeIn" variant="h2" sx={{ mt: 2}}>
             About Me
           </Typography>
 
-          <Typography className="fadeIn" sx={{ mt: 2 }}>
+          <Typography className="fadeIn" sx={{ mt: 2}}>
             I am a full stack software developer bringing knowledge across all
             stacks. I have experience as a IT support specialist so I have a
             jack of all trades. I am passionate about being a problem solver and
@@ -67,14 +72,14 @@ const About = () => {
             in my experience as I love the challenging aspects it can bring.
           </Typography>
 
-          <Typography className="fadeIn" sx={{ mt: 2 }}>
+          <Typography className="fadeIn" sx={{ mt: 2}}>
             With a degree in Management Information Systems from the University
             Of Minnesota, I have gained knowledge not only in the technology
             world, but as well as the business world. I have been working on web
             development projects since 2017.
           </Typography>
 
-          <Typography className="fadeIn" sx={{ mt: 2 }}>
+          <Typography className="fadeIn" sx={{ mt: 2}}>
             Aside from being a developer, I love getting outside and doing
             activities like hiking, biking, golfing and getting on the water for
             some fun. I am passionate about my work, but also a team member
@@ -87,7 +92,7 @@ const About = () => {
           item 
           xs={10}
           lg={3} 
-          ref={sectionRef}
+        
           sx={{ display: "flex", alignItems: "center", m: 5 }}
         >
           <Box
