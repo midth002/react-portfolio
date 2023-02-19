@@ -41,3 +41,21 @@ export const projectList = [
         },
       
 ]
+
+export const contributedList = [
+    {
+        title: 'Biosakura',
+        description: `Digital marketing website content for a innovative bioplastic products organizations.`,
+        image: './images/biosakura.png',
+        url: "https://biosakura.com/",
+        tools: ['HTML', 'CSS', 'Javascript', 'GoHighLevel']
+    }, 
+
+    {
+        title: 'Weavers Tree Service', 
+        description: 'Digital Marketing content created with GoHighLevel professional tree service company around the Saint Cloud area.',
+        image: './images/weavers-tree.png', 
+        url: 'https://weaverstreeservicemn.com/',
+        tools: ['HTML', 'CSS', 'Javascript', 'GoHighLevel']
+    }   
+]

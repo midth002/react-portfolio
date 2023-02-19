@@ -16,7 +16,7 @@ import "./projectPaper.css";
 
  
 
-const ProjectList = ({ projects }) => {
+const ContributedList = ({ projects }) => {
 
   const projectRef = useRef(null);
 
@@ -84,7 +84,7 @@ const ProjectList = ({ projects }) => {
       
       >
       <Paper
-       className="project-paper fadeIn-project"
+       className="contributed-paper fadeIn-project"
        elevation={3}
        sx={{
          backgroundImage: `url(${project.image})`,
@@ -137,28 +137,14 @@ const ProjectList = ({ projects }) => {
          </List>
 
          <Box sx={{ display: "flex", justifyContent: "center" }}>
-           <Button
-             href={project.github}
-             target="_blank"
-             sx={{
-               mr: 2,
-               bgcolor: "#233554",
-               "&:hover": {
-                 bgcolor: "#3bd3b0",
-               },
-             }}
-             variant="contained"
-             endIcon={<GitHub />}
-           >
-             Github
-           </Button>
+           
            <Button
              href={project.url}
              target="_blank"
              sx={{
                bgcolor: "#233554",
                "&:hover": {
-                 bgcolor: "#3bd3b0",
+                 bgcolor: "#9198e5",
                },
              }}
              variant="contained"
@@ -171,7 +157,7 @@ const ProjectList = ({ projects }) => {
 
        <Box
          sx={{
-           backgroundImage: `linear-gradient(to right bottom, #112240, #004a6e, #007695, #00a4b0, #3bd3bd);`,
+           backgroundImage: `linear-gradient(to right bottom, #e66465, #9198e5);`,
            color: "white",
            position: "relative",
            top: "88%",
@@ -197,4 +183,4 @@ const ProjectList = ({ projects }) => {
   );
 };
 
-export default ProjectList;
+export default ContributedList;

@@ -1,6 +1,8 @@
 @import "../../global.scss";
 
-.project-paper {
+.project-paper,
+.contributed-paper
+{
     position: relative!important;
     overflow: hidden;
     transition: 1s;
@@ -10,7 +12,9 @@
 
 
 
-.project-paper::before {
+.project-paper::before,
+.contributed-paper::before
+{
     content: "";
     background: linear-gradient(90.21deg,  #233554 -5.91%,#249c80 111.58%);
     opacity: 0.80;
@@ -21,7 +25,13 @@
     transition: 0.4s ease-in-out;
 }
 
-.project-paper:hover::before {
+.contributed-paper::before {
+    background: linear-gradient(90.21deg,  #e66465 -5.91%,#9198e5 111.58%); 
+}
+
+.project-paper:hover::before,  
+.contributed-paper:hover::before
+{
     height: 100%;
 }
 
@@ -36,11 +46,16 @@
     width: 100%;
 }
 
-.project-paper:hover .project-paper-content {
+.project-paper:hover .project-paper-content, 
+.contributed-paper:hover .project-paper-content
+{
     top: 50%;
     opacity: 1;
 }
 
+.active-btn {
+    background-color: #233554;
+}
 
 
 
