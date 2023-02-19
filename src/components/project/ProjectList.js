@@ -68,7 +68,6 @@ const ProjectList = ({ projects }) => {
     {projects.map((project, i) => (
       <Grid 
       item 
-      className="fadeIn-project"
       key={i}
       xs={11}
       md={8}
@@ -83,7 +82,7 @@ const ProjectList = ({ projects }) => {
       
       >
       <Paper
-       className="project-paper"
+       className="project-paper fadeIn-project"
        elevation={3}
        sx={{
          backgroundImage: `url(${project.image})`,
@@ -101,7 +100,7 @@ const ProjectList = ({ projects }) => {
          sx={{ display: "flex", jusitfyContent: "center" }}
          className="project-paper-content"
        >
-         <Typography color="white" variant="body1">
+         <Typography color="white" variant="body1" sx={{px: 5}}>
            {project.description}
          </Typography>
 
