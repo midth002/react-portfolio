@@ -44,6 +44,13 @@ export const projectList = [
 
 export const contributedList = [
     {
+        title: 'E2 Solutions',
+        description: `Digital marketing website for supply chain solution and Korber experts from the Twin Cities. .`,
+        image: './images/e2-solutions.png',
+        url: "https://e2.solutions",
+        tools: ['HTML', 'CSS', 'Javascript', 'JQuery', 'GoHighLevel']
+    },
+    {
         title: 'Biosakura',
         description: `Digital marketing website content for a innovative bioplastic products organizations.`,
         image: './images/biosakura.png',
